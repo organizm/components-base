@@ -12,7 +12,7 @@ ButtonComponent.propTypes = {
     color: PropTypes.string, // default: 'secondary'
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
-    size: PropTypes.string,
+    size: PropTypes.string, // main / secondary / tertiary
     className: PropTypes.string,
 };
 
