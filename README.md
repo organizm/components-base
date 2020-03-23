@@ -1,3 +1,18 @@
+Завдання:
+
+Створити бібліотеку компонетів з темпдейту Styleguide https://www.figma.com/file/2IJ1leCEo3tXSChrUirk5o/SaaS-CRM-UI-Kit-(Copy)?node-id=1152%3A613
+Не використовувати ніяких сторонніх бібліотек.
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
