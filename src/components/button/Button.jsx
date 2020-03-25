@@ -8,31 +8,84 @@ class ButtonComponent extends React.PureComponent{
         super(props);
         this.state = {
             color: 'secondary',
-            disabled: true,
+            disabled: false,
             className: 'Button',
-            isToggleOn: false,
-            disable:false};
+            size: 'sm',
+            };
     
         // це обовзково для работи `this` .
         this.onClick = this.onClick.bind(this);
       }
 
-    onClick() {
-        this.setState(state => ({
-          isToggleOn: !state.isToggleOn
-        }));
+    onClick(e) {
+        if (this.props.disabled) {
+            e.preventDefault();
+            return;
+          }
+      
+          if (this.props.onClick) {
+            this.props.onClick(e);
+          }
     }
 
     render() {
-        // return <button>Sample</button>
-        
-        return <div >
-        <button variant="outline-primary" disabled={this.state.disable} className={this.props.color} type="button" onClick={this.onClick}>
-            {this.state.isToggleOn ? 'Включено' : 'Виключено'}
+        let {
+            active,
+            // 'aria-label': ariaLabel,
+            block,
+            className,
+            close,
+            cssModule,
+            color,
+            outline,
+            size,
+            tag: Tag,
+            innerRef,
+            ...attributes
+          } = this.props;
+
+        if (close && typeof attributes.children === 'undefined') {
+            attributes.children = <span aria-hidden>×</span>;
+          }
+          
+          const classes = [
+            ,
+            { close },
+            close || 'btn',
+            size ? `${color}-${size}` : false,
+            block ? 'btn-block' : false,
+            { active, disabled: this.props.disabled }];
+      
+          if (attributes.href && Tag === 'button') {
+            Tag = 'a';
+          }
+      
+          if (this.props.color && size === color) {
+            size = size;
+          }
+
+        //   const defaultAriaLabel = close ? 'Close' : null;
+
+        return <div сlassName={size}>
+            <button 
+                className={this.props.color} 
+                type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}  
+                disabled={this.props.disabled}
+                onClick={this.onClick}>
+                Knopka
             </button>
-            <button variant="outline-primary"> test variant</button>
-            {console.log('start', this.state)}
-            </div>
+            {/* <Tag
+                type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}
+                {...attributes}
+                ref={innerRef}
+                onClick={this.onClick}
+                aria-label={ariaLabel || defaultAriaLabel}>
+                
+            </Tag> */}
+
+            {console.log('start props', this.props)}
+            {console.log('start state', this.state)}
+        </div>
     }
 }
 
@@ -45,9 +98,12 @@ ButtonComponent.propTypes = {
     className: PropTypes.string,
 };
 
-ButtonComponent.defaultProps = {color: 'secondary',
-disabled: true,
-className: 'main',
-isToggleOn: true};
+ButtonComponent.defaultProps = {
+    color: 'secondary',
+    disabled: false,
+    className: 'main',
+    tag: 'button',
+    size: 'sm',
+    };
 
 export const Button = ButtonComponent;
