@@ -3,14 +3,7 @@
   padding: 0;
 }
 
-.btn {
-  left: 10%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-}
-
-.main, .main-sm {
+.main {
   /* display: inline-block; */
   width: 160px;
   height: 42px;
@@ -34,18 +27,18 @@
   box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.24);
   transition: 0.2s; 
 }
-.main:hover, .main-sm:hover { 
+.main:hover { 
   background: #34AFF9;
   box-shadow: 0px 8px 16px rgba(52, 175, 249, 0.2);
   border-radius: 4px;
 }
-.main:active, .main-sm:active {
+.main:active {
   text-align: center;
   letter-spacing: 0.01em;
   box-shadow: 0px 2px 6px rgba(9, 142, 223, 0.3);
   background: #098EDF;
 }
-.main:disabled, .main-sm:disabled { 
+.main:disabled { 
   /* display: inline-block; */
   width: 160px;
   height: 42px;
@@ -65,7 +58,7 @@
   background: #C2CFE0;
 }
 
-.secondary, .secondary-sm {
+.secondary {
   /* display: inline-block; */
   width: 160px;
   height: 42px;
@@ -87,19 +80,19 @@
   background:  rgb(255, 252, 252);
   transition: 0.2s;
 }
-.secondary:hover, .secondary-sm:hover { 
+.secondary:hover { 
   color: #34AFF9; 
   background: rgb(255, 252, 252);
   border-color: #5ec0ee;
 }
-.secondary:active, .secondary-sm:active {
+.secondary:active {
   border: 1px solid #098EDF;
   box-sizing: border-box;
   border-radius: 4px;
   background: rgb(255, 252, 252);
   box-shadow: 0 3px 009cf7 inset;
 }
-.secondary:disabled, .secondary-sm:disabled { 
+.secondary:disabled { 
   /* display: inline-block; */
   width: 160px;
   height: 42px;
@@ -120,7 +113,7 @@
   background: rgb(255, 252, 252);
 }
 
-.tertiary, .tertiary-sm {
+.tertiary {
   /* display: inline-block; */
   width: 160px;
   height: 42px;
@@ -141,7 +134,7 @@
   background: white;
   transition: 0.2s;
 }
-.tertiary:hover, .tertiary-sm:hover { 
+.tertiary:hover{ 
   color: #34AFF9; 
   background:  rgb(255, 252, 252);
   border-color: #5ec0ee;
@@ -151,7 +144,7 @@
   box-shadow: 0 3px 009cf7 inset;
   background:  rgb(255, 252, 252);
 }
-.tertiary:disabled, .tertiary-sm:disabled { 
+.tertiary:disabled { 
   /* display: inline-block; */
   width: 160px;
   height: 42px;
