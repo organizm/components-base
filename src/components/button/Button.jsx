@@ -2,15 +2,14 @@ import React from "react";
 import PropTypes from 'prop-types';
 import './Button.css';
 
-
 class ButtonComponent extends React.PureComponent{
     constructor(props) {
         super(props);
         this.state = {
             color: 'secondary',
             disabled: false,
-            className: 'Button',
-            size: 'sm',
+            className: 'secondary',
+            size: 'secondary',
             };
     
         // це обовзково для работи `this` .
@@ -43,30 +42,15 @@ class ButtonComponent extends React.PureComponent{
             ...attributes
           } = this.props;
 
-        if (close && typeof attributes.children === 'undefined') {
-            attributes.children = <span aria-hidden>×</span>;
-          }
-          
-          const classes = [
-            { close },
-            close || 'btn',
-            size ? `${color}-${size}` : false,
-            block ? 'btn-block' : false,
-            { active, disabled: this.props.disabled }];
-      
-          if (attributes.href && Tag === 'button') {
-            Tag = 'a';
-          }
-
+          let btnClass = `${className} ${size} ${color}`; 
+          console.log("mij class", btnClass);
         return <button 
-                  className={this.props.className} 
+                  className={btnClass}
                   type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}  
                   disabled={this.props.disabled}
                   onClick={this.onClick}>
                   Knopka 
                 </button>
-    {console.log('start props', this.props)}
-    {console.log('start state', this.state)}
     }
 
 }

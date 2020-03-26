@@ -8,12 +8,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button className="main" color="red"/> 
-        <Button className="main" disabled="true"/>
-        <Button className="secondary" />
-        <Button className="secondary" disabled="true" />
-        <Button className="tertiary" />
-        <Button className="tertiary" disabled="true" />
+        <Button className="btn-base" size="main" disabled={false} color=""/> 
+        <Button className="btn-base" size="main" disabled={true} color=""/>
+        <Button className="btn-base" size="secondary" disabled={false} color="accent_blue"/>
+        <Button className="btn-base" size="secondary" disabled={true} color=""/>
+        <Button className="btn-base" size="tertiary" disabled={false} color=""/>
+        <Button className="btn-base" size="tertiary" disabled={true} color=""/>
       </header>
     </div>
   );
