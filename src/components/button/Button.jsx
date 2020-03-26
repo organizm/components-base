@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import './Button.css';
+import './Button-lg.css';
 
 
 class ButtonComponent extends React.PureComponent{
@@ -31,7 +32,6 @@ class ButtonComponent extends React.PureComponent{
     render() {
         let {
             active,
-            // 'aria-label': ariaLabel,
             block,
             className,
             close,
@@ -49,7 +49,6 @@ class ButtonComponent extends React.PureComponent{
           }
           
           const classes = [
-            ,
             { close },
             close || 'btn',
             size ? `${color}-${size}` : false,
@@ -60,19 +59,19 @@ class ButtonComponent extends React.PureComponent{
             Tag = 'a';
           }
       
-          if (this.props.color && size === color) {
+          if (this.props.сlassName && size === size) {
             size = size;
           }
 
         //   const defaultAriaLabel = close ? 'Close' : null;
 
-        return <div сlassName={size}>
+        return <div сlassName="btn">
             <button 
-                className={this.props.color} 
+                className={this.props.className} 
                 type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}  
                 disabled={this.props.disabled}
                 onClick={this.onClick}>
-                Knopka
+                Knopka 
             </button>
             {/* <Tag
                 type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}

@@ -10,17 +10,17 @@
   bottom: 0%;
 }
 
-.main, .main-sm {
+.main-lg {
   /* display: inline-block; */
-  width: 160px;
-  height: 42px;
-  left: calc(50% - 132px/2);
-  top: calc(50% - 20px/2);
+  width: 240px;
+  height: 62px;
+  left: calc(50% - 182px/2);
+  top: calc(50% - 30px/2);
   font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 19px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
 
   color: #FFFFFF;
   text-decoration: none;
@@ -34,28 +34,28 @@
   box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.24);
   transition: 0.2s; 
 }
-.main:hover, .main-sm:hover { 
+.main-lg:hover { 
   background: #34AFF9;
   box-shadow: 0px 8px 16px rgba(52, 175, 249, 0.2);
   border-radius: 4px;
 }
-.main:active, .main-sm:active {
+.main-lg:active {
   text-align: center;
   letter-spacing: 0.01em;
   box-shadow: 0px 2px 6px rgba(9, 142, 223, 0.3);
   background: #098EDF;
 }
-.main:disabled, .main-sm:disabled { 
+.main-lg:disabled { 
   /* display: inline-block; */
-  width: 160px;
-  height: 42px;
-  left: calc(50% - 132px/2);
-  top: calc(50% - 20px/2);
+  width: 240px;
+  height: 62px;
+  left: calc(50% - 182px/2);
+  top: calc(50% - 30px/2);
   font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 19px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
   color: #FFFFFF;
   opacity: 0.8;
   text-decoration: none;
@@ -65,17 +65,17 @@
   background: #C2CFE0;
 }
 
-.secondary, .secondary-sm {
+.secondary-lg {
   /* display: inline-block; */
-  width: 160px;
-  height: 42px;
-  left: calc(50% - 132px/2);
-  top: calc(50% - 20px/2);
+  width: 240px;
+  height: 62px;
+  left: calc(50% - 182px/2);
+  top: calc(50% - 30px/2);
   font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 19px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
   color: #109CF1;
   text-decoration: none;
   user-select: none;
@@ -87,29 +87,28 @@
   background:  rgb(255, 252, 252);
   transition: 0.2s;
 }
-.secondary:hover, .secondary-sm:hover { 
+.secondary-lg:hover { 
   color: #34AFF9; 
   background: rgb(255, 252, 252);
   border-color: #5ec0ee;
 }
-.secondary:active, .secondary-sm:active {
+.secondary-lg:active {
   border: 1px solid #098EDF;
   box-sizing: border-box;
   border-radius: 4px;
   background: rgb(255, 252, 252);
   box-shadow: 0 3px 009cf7 inset;
 }
-.secondary:disabled, .secondary-sm:disabled { 
-  /* display: inline-block; */
-  width: 160px;
-  height: 42px;
-  left: calc(50% - 132px/2);
-  top: calc(50% - 20px/2);
+.secondary-lg:disabled { 
+  width: 240px;
+  height: 62px;
+  left: calc(50% - 182px/2);
+  top: calc(50% - 30px/2);
   font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 19px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
   color: #C2CFE0;
   text-decoration: none;
   padding: .5em 2em;
@@ -120,17 +119,17 @@
   background: rgb(255, 252, 252);
 }
 
-.tertiary, .tertiary-sm {
+.tertiary-lg {
   /* display: inline-block; */
-  width: 160px;
-  height: 42px;
-  left: calc(50% - 132px/2);
-  top: calc(50% - 20px/2);
+  width: 240px;
+  height: 62px;
+  left: calc(50% - 182px/2);
+  top: calc(50% - 30px/2);
   font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 19px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
   color: #109CF1;
   text-decoration: none;
   user-select: none;
@@ -141,27 +140,27 @@
   background: white;
   transition: 0.2s;
 }
-.tertiary:hover, .tertiary-sm:hover { 
+.tertiary-lg:hover { 
   color: #34AFF9; 
   background:  rgb(255, 252, 252);
   border-color: #5ec0ee;
 }
-.tertiary:active, .tertiary-sm:active {
+.tertiary-lg:active {
   background: #098EDF;
   box-shadow: 0 3px 009cf7 inset;
   background:  rgb(255, 252, 252);
 }
-.tertiary:disabled, .tertiary-sm:disabled { 
+.tertiary-lg:disabled { 
   /* display: inline-block; */
-  width: 160px;
-  height: 42px;
-  left: calc(50% - 132px/2);
-  top: calc(50% - 20px/2);
+  width: 240px;
+  height: 62px;
+  left: calc(50% - 182px/2);
+  top: calc(50% - 30px/2);
   font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 19px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 27px;
   text-decoration: none;
   padding: .5em 2em;
   border-radius: 4px;
