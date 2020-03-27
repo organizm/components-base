@@ -20,6 +20,7 @@
   outline: none;
   border: 1px solid;
   text-align: center;
+  /* position: relative; */
 }
 
 .main {
@@ -46,47 +47,53 @@
 .secondary {
   color: #109CF1;
   border: 1px solid #109CF1; 
-  background:  #E5E5E5;
+/* In original #E5E5E5 */
+  background:  rgb(253, 247, 247);
   transition: 0.2s;
 }
 .secondary:hover { 
   color: #34AFF9; 
-  background: #E5E5E5;
+  background: rgb(253, 247, 247);
   border: 1px solid #34AFF9;
   box-sizing: border-box;
 }
 .secondary:active {
   border: 1px solid #098EDF;
   box-sizing: border-box;
-  background: #E5E5E5;
+  background: rgb(253, 247, 247);
 }
 .secondary:disabled { 
   color: #C2CFE0;
   border: 1px solid #C2CFE0;
   box-sizing: border-box;
-  background: #E5E5E5;
+  background: rgb(253, 247, 247);
 }
 
 .tertiary {
+  width: 160px;
+  height: 20px;
+  line-height: 0.5em;
+  letter-spacing: 0.01em;
+  align-items: center;
   color: #109CF1;
   border: none; 
-  background: #E5E5E5;
+  background: rgb(253, 247, 247);
   transition: 0.2s;
 }
 .tertiary:hover{ 
   color: #34AFF9; 
-  background:  #E5E5E5;
+  background:  rgb(253, 247, 247);
   border-color: #5ec0ee;
 }
-.tertiary:active, .tertiary-sm:active {
+.tertiary:active {
   background: #098EDF;
   box-shadow: 0 3px 009cf7 inset;
-  background:  #E5E5E5;
+  background:  rgb(253, 247, 247);
 }
 .tertiary:disabled { 
   color: #109CF1;
   opacity: 0.4;
-  background: #E5E5E5;
+  background: rgb(253, 247, 247);
 }
 
 .accent_blue {

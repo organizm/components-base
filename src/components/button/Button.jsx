@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import './Button.css';
 
+
 class ButtonComponent extends React.PureComponent{
     constructor(props) {
         super(props);
@@ -29,27 +30,23 @@ class ButtonComponent extends React.PureComponent{
 
     render() {
         let {
+            'aria-label': ariaLabel,
             active,
-            block,
-            className,
-            close,
-            cssModule,
-            color,
-            outline,
+            className,       
+            color,  
             size,
-            tag: Tag,
-            innerRef,
             ...attributes
           } = this.props;
 
-          let btnClass = `${className} ${size} ${color}`; 
-          console.log("mij class", btnClass);
+        let btnClass = `${className} ${size} ${color}`; 
+
+        console.log("mij class", btnClass);
+
         return <button 
                   className={btnClass}
-                  type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}  
                   disabled={this.props.disabled}
                   onClick={this.onClick}>
-                  Knopka 
+                    {this.props.ariaLabel} 
                 </button>
     }
 
@@ -65,11 +62,11 @@ ButtonComponent.propTypes = {
 };
 
 ButtonComponent.defaultProps = {
+    ariaLabel: 'Knopka',
     color: 'secondary',
     disabled: false,
-    className: 'main',
-    tag: 'button',
-    size: 'sm',
+    className: 'btn-base',
+    size: 'main',
     };
 
 export const Button = ButtonComponent;
