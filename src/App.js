@@ -1,4 +1,5 @@
 import React from 'react';
+// import {Button} from "./components/button/Button";
 import {Button} from "./components/button/Button";
 import './App.css';
 
@@ -8,12 +9,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button className="btn-base" size="main" disabled={false} color="" ariaLabel="Start"/> 
-        <Button className="btn-base" size="main" disabled={true} color="" ariaLabel="DAISABLE"/>
-        <Button className="btn-base" size="secondary" disabled={false} color="accent_blue" ariaLabel="SECOND"/>
-        <Button className="btn-base" size="secondary" disabled={true} color="" ariaLabel="disabled"/>
-        <Button className="btn-base" size="tertiary" disabled={false} color="" ariaLabel="Start new project"/>
-        <Button className="btn-base" size="tertiary" disabled={true} color="" />
+        <Button className="btn-base" size="btn-main" disabled={false}/>
+        <br></br>
+        <Button className="btn-base" size="btn-main" disabled={true} color="" ariaLabel="DAISABLE"/>
+        <br></br>
+        <Button className="btn-base" size="btn-secondary" disabled={false} ariaLabel="SECOND"/>
+        <br></br>
+        <Button className="btn-base" size="btn-secondary" disabled={true} ariaLabel="disabled"/>
+        <br></br>
+        <Button className="btn-base" size="btn-tertiary" disabled={false} color="" ariaLabel="Start new project"/>
+        <br></br>
+        <Button className="btn-base" size="btn-tertiary" disabled={true} color="" />
       </header>
     </div>
   );
