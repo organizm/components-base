@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+
 import './Button.css';
 
 
@@ -30,24 +31,32 @@ class ButtonComponent extends React.PureComponent{
 
     render() {
         let {
-            'aria-label': ariaLabel,
+            ariaLabel,
             active,
-            className,       
+            className,   
+            disabled,    
             color,  
             size,
+            onClick,
             ...attributes
           } = this.props;
 
         let btnClass = `${className} ${size} ${color}`; 
 
+        const Tag = attributes.href ? 'a' : 'button';
+
         console.log("mij class", btnClass);
 
-        return <button 
-                  className={btnClass}
-                  disabled={this.props.disabled}
-                  onClick={this.onClick}>
-                    {this.props.ariaLabel} 
-                </button>
+        return (
+          <Tag
+            className={btnClass}
+            disabled={disabled}
+            onClick={onClick}
+            {...attributes}
+          >
+            {ariaLabel}
+          </Tag>
+        );
     }
 
 }
