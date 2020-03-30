@@ -44,12 +44,14 @@
   opacity: 0.8;
   background: #C2CFE0;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .btn-secondary {
   color: #109CF1;
   border: 1px solid #109CF1; 
   transition: 0.2s;
+  background:none;
 }
 .btn-secondary:hover { 
   color: #34AFF9; 
@@ -76,6 +78,7 @@
   color: #109CF1;
   border: none; 
   transition: 0.2s;
+  background:none;
 }
 .btn-tertiary:hover{ 
   color: #34AFF9; 

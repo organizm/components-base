@@ -31,6 +31,7 @@ class ButtonComponent extends React.PureComponent{
 
     render() {
         let {
+            children,
             ariaLabel,
             active,
             className,   
@@ -54,7 +55,7 @@ class ButtonComponent extends React.PureComponent{
             onClick={onClick}
             {...attributes}
           >
-            {ariaLabel}
+            {this.props.children}
           </Tag>
         );
     }
