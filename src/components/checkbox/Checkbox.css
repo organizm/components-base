@@ -1,6 +1,10 @@
 * {
-  margin: 0; 
+  margin: 0;
   padding: 0;
+}
+
+.checkbox {
+  margin-bottom: 1em;
 }
 
 .chek-base {
@@ -16,13 +20,14 @@
   background-position: center;
 }
 
-.chek-base+label {
+.chek-base + label {
   display: inline-flex;
   align-items: center;
   user-select: none;
+  cursor: pointer;
 }
 
-.chek-base+label::before {
+.chek-base + label::before {
   content: '';
   display: inline-block;
   width: 16px;
@@ -37,36 +42,42 @@
   background-size: 50% 50%;
 }
 
-.chek-base:not(:disabled):active+label::before {
-
-  border-color: #C2CFE0;
+.chek-base:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #c2cfe0;
 }
 
-.chek-base:checked+label::before {
-  border: 2px solid #C2CFE0;
-  background-image: url("img/chek-ok-gray.png");
-
-}
-    
-.chek-base:disabled+label::before {
-  background-color: #e9ecef;
+.chek-base:not(:disabled):active + label::before {
+  border-color: #c2cfe0;
 }
 
-.checkbox {
-  margin-bottom: 1em;
-}    
+.chek-base:checked + label::before {
+  border: 2px solid #c2cfe0;
+  background-image: url('img/chek-ok-gray.png');
+}
 
-.chek-main:checked+label::before {
-  border: 2px solid #0b76ef;
-  border-color: #0b76ef;
-  background: #109CF1;
-  background-image: url("img/chek-ok-white.png");
+.chek-base:disabled + label::before {
+  border: 2px solid #c2cfe0;
+  background-image: url('img/chek-ok-gray.png');
+  cursor: not-allowed;
+}
+
+.chek-main:checked + label::before {
+  border-color: #109cf1;
+  background: #109cf1;
+  background-image: url('img/chek-ok-white.png');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.chek-success:checked+label::before {
-  border: 2px solid #2ED47A;
-  border-color: #2ED47A;
-  background-image: url("img/chek-ok-green.png");
+.chek-main:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #109cf1;
+}
+
+.chek-success:checked + label::before {
+  border: 2px solid #2ed47a;
+  border-color: #2ed47a;
+  background-image: url('img/chek-ok-green.png');
+}
+.chek-success:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #2ed47a;
 }
