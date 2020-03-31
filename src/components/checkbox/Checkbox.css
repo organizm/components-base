@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
 }
@@ -7,6 +8,12 @@
   margin-bottom: 1em;
 }
 
+=======
+  margin: 0; 
+  padding: 0;
+}
+
+>>>>>>> c09b38e1f591025e6067a46cb83e323b86321584
 .chek-base {
   position: absolute;
   z-index: -1;
@@ -20,6 +27,7 @@
   background-position: center;
 }
 
+<<<<<<< HEAD
 .chek-base + label {
   display: inline-flex;
   align-items: center;
@@ -28,6 +36,15 @@
 }
 
 .chek-base + label::before {
+=======
+.chek-base+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.chek-base+label::before {
+>>>>>>> c09b38e1f591025e6067a46cb83e323b86321584
   content: '';
   display: inline-block;
   width: 16px;
@@ -42,6 +59,7 @@
   background-size: 50% 50%;
 }
 
+<<<<<<< HEAD
 .chek-base:not(:disabled):not(:checked) + label:hover::before {
   border-color: #c2cfe0;
 }
@@ -65,10 +83,37 @@
   border-color: #109cf1;
   background: #109cf1;
   background-image: url('img/chek-ok-white.png');
+=======
+.chek-base:not(:disabled):active+label::before {
+
+  border-color: #C2CFE0;
+}
+
+.chek-base:checked+label::before {
+  border: 2px solid #C2CFE0;
+  background-image: url("img/chek-ok-gray.png");
+
+}
+    
+.chek-base:disabled+label::before {
+  background-color: #e9ecef;
+}
+
+.checkbox {
+  margin-bottom: 1em;
+}    
+
+.chek-main:checked+label::before {
+  border: 2px solid #0b76ef;
+  border-color: #0b76ef;
+  background: #109CF1;
+  background-image: url("img/chek-ok-white.png");
+>>>>>>> c09b38e1f591025e6067a46cb83e323b86321584
   background-repeat: no-repeat;
   background-position: center;
 }
 
+<<<<<<< HEAD
 .chek-main:not(:disabled):not(:checked) + label:hover::before {
   border-color: #109cf1;
 }
@@ -80,4 +125,10 @@
 }
 .chek-success:not(:disabled):not(:checked) + label:hover::before {
   border-color: #2ed47a;
+=======
+.chek-success:checked+label::before {
+  border: 2px solid #2ED47A;
+  border-color: #2ED47A;
+  background-image: url("img/chek-ok-green.png");
+>>>>>>> c09b38e1f591025e6067a46cb83e323b86321584
 }

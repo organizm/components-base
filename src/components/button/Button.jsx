@@ -23,10 +23,25 @@ class ButtonComponent extends React.PureComponent {
       return;
     }
 
+<<<<<<< HEAD
     if (this.props.onClick) {
       this.props.onClick(e);
     }
   }
+=======
+    render() {
+        let {
+            children,
+            ariaLabel,
+            active,
+            className,   
+            disabled,    
+            color,  
+            size,
+            onClick,
+            ...attributes
+          } = this.props;
+>>>>>>> c09b38e1f591025e6067a46cb83e323b86321584
 
   render() {
     const {
@@ -45,7 +60,21 @@ class ButtonComponent extends React.PureComponent {
 
     const Tag = attributes.href ? 'a' : 'button';
 
+<<<<<<< HEAD
     // console.log("mij class", btnClass);
+=======
+        return (
+          <Tag
+            className={btnClass}
+            disabled={disabled}
+            onClick={onClick}
+            {...attributes}
+          >
+            {this.props.children}
+          </Tag>
+        );
+    }
+>>>>>>> c09b38e1f591025e6067a46cb83e323b86321584
 
     return (
       <Tag
