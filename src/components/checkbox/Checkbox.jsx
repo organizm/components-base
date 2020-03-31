@@ -51,7 +51,9 @@ class CheckboxComponent extends React.PureComponent {
           disabled={disabled}
           {...attributes}
         />
-        <label htmlFor={id}>{this.props.label}</label>
+        <label htmlFor={id}>
+          <span className="check-lbl">{this.props.label}</span>
+        </label>
       </div>
     );
   }

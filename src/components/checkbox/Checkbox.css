@@ -36,10 +36,13 @@
   flex-grow: 0;
   border: 2px solid rgb(213, 213, 213);
   border-radius: 0.25em;
-  margin-right: 0.5em;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
+}
+
+.check-lbl {
+  margin-left: 0.5em;
 }
 
 .chek-base:not(:disabled):not(:checked) + label:hover::before {
@@ -57,7 +60,6 @@
 
 .chek-base:disabled + label::before {
   border: 2px solid #c2cfe0;
-  background-image: url('img/chek-ok-gray.png');
   cursor: not-allowed;
 }
 
