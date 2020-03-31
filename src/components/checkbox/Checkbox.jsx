@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import './Checkbox.css';
+import "./Checkbox.css";
 
 class CheckboxComponent extends React.PureComponent {
   constructor(props) {
@@ -51,6 +51,7 @@ class CheckboxComponent extends React.PureComponent {
           disabled={disabled}
           {...attributes}
         />
+        {/* add span */}
         <label htmlFor={id}>
           <span className="check-lbl">{this.props.label}</span>
         </label>
@@ -60,22 +61,22 @@ class CheckboxComponent extends React.PureComponent {
 }
 
 CheckboxComponent.propTypes = {
-  'aria-label': PropTypes.string,
+  "aria-label": PropTypes.string,
   color: PropTypes.string, // default: 'secondary'
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   size: PropTypes.string, // main / secondary / tertiary
   className: PropTypes.string,
   checked: PropTypes.bool,
-  label: PropTypes.string,
+  label: PropTypes.string
 };
 
 CheckboxComponent.defaultProps = {
   disabled: false,
-  className: 'chek-base',
-  type: 'checkbox',
+  className: "chek-base",
+  type: "checkbox",
   checked: false,
-  label: '',
+  label: ""
 };
 
 export const Checkbox = CheckboxComponent;
