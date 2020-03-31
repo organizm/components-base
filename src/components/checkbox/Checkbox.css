@@ -28,7 +28,7 @@
 }
 
 .chek-base + label::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -36,10 +36,14 @@
   flex-grow: 0;
   border: 2px solid rgb(213, 213, 213);
   border-radius: 0.25em;
-  margin-right: 0.5em;
+  /* margin-left: 0.5em; */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
+}
+
+.check-lbl {
+  margin-left: 0.5em;
 }
 
 .chek-base:not(:disabled):not(:checked) + label:hover::before {
@@ -52,19 +56,18 @@
 
 .chek-base:checked + label::before {
   border: 2px solid #c2cfe0;
-  background-image: url('img/chek-ok-gray.png');
+  background-image: url("img/chek-ok-gray.png");
 }
 
 .chek-base:disabled + label::before {
   border: 2px solid #c2cfe0;
-  background-image: url('img/chek-ok-gray.png');
   cursor: not-allowed;
 }
 
 .chek-main:checked + label::before {
   border-color: #109cf1;
   background: #109cf1;
-  background-image: url('img/chek-ok-white.png');
+  background-image: url("img/chek-ok-white.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -76,7 +79,7 @@
 .chek-success:checked + label::before {
   border: 2px solid #2ed47a;
   border-color: #2ed47a;
-  background-image: url('img/chek-ok-green.png');
+  background-image: url("img/chek-ok-green.png");
 }
 .chek-success:not(:disabled):not(:checked) + label:hover::before {
   border-color: #2ed47a;
