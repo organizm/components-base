@@ -56,9 +56,13 @@ class CheckboxComponent extends React.PureComponent {
           {...attributes}
         />
         <label htmlFor={id}>
+<<<<<<< HEAD
           {this.props.label.length > "" && (
             <span className="check-lbl">{this.props.label}</span>
           )}
+=======
+          <span className="check-lbl">{this.props.label}</span>
+>>>>>>> f5a8a1f23eab52bedc9c327910df64066817066b
         </label>
       </div>
     );
@@ -73,7 +77,10 @@ CheckboxComponent.propTypes = {
   size: PropTypes.string, // main / secondary / tertiary
   className: PropTypes.string,
   checked: PropTypes.bool,
+<<<<<<< HEAD
   defaultChecked: PropTypes.bool,
+=======
+>>>>>>> f5a8a1f23eab52bedc9c327910df64066817066b
   label: PropTypes.string
 };
 
@@ -82,7 +89,10 @@ CheckboxComponent.defaultProps = {
   className: "chek-base",
   type: "checkbox",
   checked: false,
+<<<<<<< HEAD
   defaultChecked: false,
+=======
+>>>>>>> f5a8a1f23eab52bedc9c327910df64066817066b
   label: ""
 };
 
