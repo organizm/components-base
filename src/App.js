@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button } from './components/button/Button';
-import { Checkbox } from './components/checkbox/Checkbox';
-import './App.css';
+import React from "react";
+import { Button } from "./components/button/Button";
+import { Checkbox } from "./components/checkbox/Checkbox";
+import "./App.css";
 
 function App() {
   return (
@@ -51,6 +51,7 @@ function App() {
           className="chek-base"
           disabled={false}
           color="chek-success"
+          // checked={true}
           id="cb3"
         />
       </header>
