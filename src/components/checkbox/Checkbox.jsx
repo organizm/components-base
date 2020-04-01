@@ -36,7 +36,7 @@ class CheckboxComponent extends React.PureComponent {
       size,
       onClick,
       checked,
-      defaultChecked,
+
       ...attributes
     } = this.props;
 
@@ -51,7 +51,7 @@ class CheckboxComponent extends React.PureComponent {
           className={checkClass}
           size={size}
           disabled={disabled}
-          // checked={checked}
+          defaultChecked={checked}
           onChange={this.onChange}
           {...attributes}
         />
@@ -82,7 +82,6 @@ CheckboxComponent.defaultProps = {
   className: "chek-base",
   type: "checkbox",
   checked: false,
-  defaultChecked: false,
   label: ""
 };
 

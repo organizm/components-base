@@ -41,17 +41,12 @@ function App() {
           label="test label"
           id="cb1"
         />
-        <Checkbox
-          className="chek-base"
-          disabled={true}
-          color="chek-main"
-          id="cb2"
-        />
+        <Checkbox className="chek-base" disabled={true} color="" id="cb2" />
         <Checkbox
           className="chek-base"
           disabled={false}
           color="chek-success"
-          // checked={true}
+          checked={true}
           id="cb3"
         />
       </header>
