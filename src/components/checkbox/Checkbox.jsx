@@ -21,11 +21,10 @@ class CheckboxComponent extends React.PureComponent {
     if (this.props.onChange) {
       this.props.onChange(e);
     }
-
-    if (typeof this.props.onChange !== "function") {
-      return null;
-    } else {
-      return this.props.onChange;
+    // перевірка та виклик функції, пропса onChange є функція, значить її треба не повертати а викликати
+    // в цю функцію треба передати поточне значення чекбокса.
+    if (typeof this.props.onChange == "function") {
+      this.props.onChange();
     }
   }
 
@@ -48,7 +47,7 @@ class CheckboxComponent extends React.PureComponent {
     } = this.props;
 
     let checkClass = `${className} ${size} ${color}`;
-    console.log("in stat", this.props.onChange);
+    // console.log("in stat", this.props.onChange);
     return (
       <div className="checkbox">
         <input
@@ -74,7 +73,7 @@ CheckboxComponent.propTypes = {
   "aria-label": PropTypes.string,
   color: PropTypes.string, // default: 'secondary'
   disabled: PropTypes.bool,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   size: PropTypes.string, // main / secondary / tertiary
   className: PropTypes.string,
   checked: PropTypes.bool,
@@ -87,8 +86,8 @@ CheckboxComponent.defaultProps = {
   className: "chek-base",
   type: "checkbox",
   checked: false,
-  label: "",
-  onChange: () => {}
+  label: ""
+  // onChange: () => {}
 };
 
 export const Checkbox = CheckboxComponent;
