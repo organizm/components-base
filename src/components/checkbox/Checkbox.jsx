@@ -18,7 +18,6 @@ class CheckboxComponent extends React.PureComponent {
 
     if (this.props.onChange) {
       this.props.onChange(e);
-      // this.state.checked = !this.state.checked;
     }
   }
 
@@ -56,9 +55,7 @@ class CheckboxComponent extends React.PureComponent {
           {...attributes}
         />
         <label htmlFor={id}>
-          {this.props.label.length > 0 && (
-            <span className="check-lbl">{this.props.label}</span>
-          )}
+          {!!label.length && <span className="check-lbl">{label}</span>}
         </label>
       </div>
     );

@@ -47,6 +47,7 @@ function App() {
           disabled={false}
           color="chek-success"
           checked={true}
+          onChange="test"
           id="cb3"
         />
       </header>
