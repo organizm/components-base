@@ -6,7 +6,9 @@ import "./Checkbox.css";
 class CheckboxComponent extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      onChange: () => {}
+    };
     this.onChange = this.onChange.bind(this);
   }
 
@@ -18,6 +20,12 @@ class CheckboxComponent extends React.PureComponent {
 
     if (this.props.onChange) {
       this.props.onChange(e);
+    }
+
+    if (typeof this.props.onChange !== "function") {
+      return null;
+    } else {
+      return this.props.onChange;
     }
   }
 
@@ -40,7 +48,7 @@ class CheckboxComponent extends React.PureComponent {
     } = this.props;
 
     let checkClass = `${className} ${size} ${color}`;
-
+    console.log("in stat", this.props.onChange);
     return (
       <div className="checkbox">
         <input
@@ -66,7 +74,7 @@ CheckboxComponent.propTypes = {
   "aria-label": PropTypes.string,
   color: PropTypes.string, // default: 'secondary'
   disabled: PropTypes.bool,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   size: PropTypes.string, // main / secondary / tertiary
   className: PropTypes.string,
   checked: PropTypes.bool,
@@ -79,7 +87,8 @@ CheckboxComponent.defaultProps = {
   className: "chek-base",
   type: "checkbox",
   checked: false,
-  label: ""
+  label: "",
+  onChange: () => {}
 };
 
 export const Checkbox = CheckboxComponent;
