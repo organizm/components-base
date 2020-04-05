@@ -47,7 +47,7 @@ function App() {
           disabled={false}
           color="chek-success"
           checked={true}
-          // onChange="function"
+          // onChange={this.onChange}
           id="cb3"
         />
       </header>

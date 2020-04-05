@@ -3,8 +3,19 @@
   padding: 0;
 }
 
+@font-face {
+  /* ім'я шрифта */
+  /* font-family: Poppins;  */
+  src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); /* шлях до файлу шрифта */
+}
+
 .checkbox {
   margin-bottom: 1em;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
 }
 
 .chek-base {

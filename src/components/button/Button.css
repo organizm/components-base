@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+@font-face {
+  /* ім'я шрифта */
+  /* font-family: Poppins;  */
+  src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); /* шлях до файлу шрифта */
+}
+
 .btn-base {
   display: inline-block;
   width: 160px;
