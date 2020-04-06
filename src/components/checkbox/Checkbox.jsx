@@ -8,9 +8,8 @@ class CheckboxComponent extends React.PureComponent {
     super(props);
     // Не викликати this.setState() тут!
     this.state = {};
-    this.state.checked = this.props.checked;
-    this.state.label = this.props.label;
     this.onChange = this.onChange.bind(this);
+    // this.changeLabel = this.changeLabel.bind(this);
   }
 
   onChange(e) {
@@ -35,12 +34,12 @@ class CheckboxComponent extends React.PureComponent {
     //   msg: !state.msg
     // }));
 
-    if (this.props.onChange) {
-      this.setState({ msg: "Checked" });
-    } else {
-      this.setState({ msg: "Un-Checked" });
-    }
-    console.log("in checked", this.state.checked);
+    // if (this.props.onChange) {
+    //   this.setState({ msg: "Checked" });
+    // } else {
+    //   this.setState({ msg: "Un-Checked" });
+    // }
+    // console.log("in checked", this.state.checked);
   }
 
   render() {
@@ -76,8 +75,11 @@ class CheckboxComponent extends React.PureComponent {
           size={size}
           disabled={disabled}
           defaultChecked={checked}
-          // onChange={() => this.setState({ checked: !this.state.checked })}
-          onChange={this.onChange}
+          onChange={() => this.setState({ checked: !this.state.checked })}
+          // onChange={() => {
+          //   this.props.changeLabel(msg);
+          // }}
+          // onChange={this.onChange}
           {...attributes}
         />
 
@@ -113,4 +115,15 @@ CheckboxComponent.defaultProps = {
   // onChange: () => {}
 };
 
+function changeLabel() {
+  // let msg;
+  if (this.state.checked) {
+    this.setState({ label: "Checked" });
+  } else {
+    this.setState({ label: "Un-Checked" });
+  }
+  // msg = "Un-Checked";
+}
+
 export const Checkbox = CheckboxComponent;
+export const changeLabelFunc = changeLabel;
