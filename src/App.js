@@ -1,25 +1,32 @@
 import React from "react";
 import { Button } from "./components/button/Button";
-import { Checkbox, changeLabelFunc } from "./components/checkbox/Checkbox";
+import { Checkbox } from "./components/checkbox/Checkbox";
 import "./App.css";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    // this.onChange = this.onChange.bind(this);
-    this.changeLabel = this.changeLabel.bind(this);
+    this.state = {
+      label: ""
+    };
+    this.onChangeFunc = this.onChangeFunc.bind(this);
+    console.log("start", this.state);
   }
 
-  changeLabel(e) {
-    this.setState({ checked: !this.state.checked });
-    let msg;
+  onChangeFunc(id) {
+    // const check = this.state.checkbox[id];
+    const label = "";
+    const msg = "";
+
     if (this.state.checked) {
-      this.setState({ msg: "Checked" });
+      // label = "checked";
+      this.setState({ msg: "ВИКЛЮЧЕНО", checked: false, label: "checked" });
     } else {
-      this.setState({ msg: "Un-Checked" });
+      // label = "unchecked";
+      this.setState({ msg: "ВКЛЮЧЕНО", checked: true, label: "unchecked" });
     }
-    msg = "Un-Checked";
+    this.setState({ checked: !this.state.checked });
+    console.log("func app", this.state);
   }
 
   render() {
@@ -58,12 +65,8 @@ class App extends React.Component {
             disabled={false}
             color="chek-main"
             label="test label"
-            // onChange={changeLabel()}
-            // onChange={() => this.changeLabel()}
-            // onChange={() => {
-            //   changeLabelFunc();
-            // }}
-            // onChange={this.changeLabel}
+            onChange={this.onChangeFunc}
+            msg={this.state.msg}
             id="cb1"
           />
           <Checkbox className="chek-base" disabled={true} color="" id="cb2" />
@@ -72,7 +75,7 @@ class App extends React.Component {
             disabled={false}
             color="chek-success"
             checked={true}
-            // onChange={this.changeLabel}
+            onChange={this.onChangeFunc}
             id="cb3"
           />
         </header>
@@ -80,14 +83,4 @@ class App extends React.Component {
     );
   }
 }
-// function changeLabel(msg) {
-//   let msg;
-//   // if (this.state.checked) {
-//   //   this.setState({ msg: "Checked" });
-//   // } else {
-//   //   this.setState({ msg: "Un-Checked" });
-//   // }
-//   msg = "Un-Checked";
-// }
-
 export default App;
