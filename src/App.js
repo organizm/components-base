@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./components/button/Button";
 import { Checkbox } from "./components/checkbox/Checkbox";
+
 import "./App.css";
 
 class App extends React.Component {
@@ -14,9 +15,9 @@ class App extends React.Component {
   }
 
   onChangeFunc(id) {
-    // const check = this.state.checkbox[id];
-    const label = "";
-    const msg = "";
+    // const task = this.state.checkbox[id];
+    let label = "";
+    let msg = "";
 
     if (this.state.checked) {
       // label = "checked";

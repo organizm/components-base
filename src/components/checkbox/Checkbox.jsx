@@ -8,7 +8,6 @@ class CheckboxComponent extends React.PureComponent {
     super(props);
     // Не викликати this.setState() тут!
     this.state = {};
-    // this.state.checked = false;
     this.onChange = this.onChange.bind(this);
   }
 
@@ -18,29 +17,11 @@ class CheckboxComponent extends React.PureComponent {
       return;
     }
 
-    if (this.props.onChange) {
-      let msg;
-      // if (this.state.checked) {
-      //   msg = "checked";
-      // } else {
-      //   msg = "unchecked";
-      // }
-      this.props.onChange(e);
-      // return (
-      //   <div>
-      //     <p>this box is {msg}.</p>
-      //   </div>
-      // );
-    }
-
     // перевірка та виклик функції, пропса onChange є функція, значить її треба не повертати а викликати
     // в цю функцію треба передати поточне значення чекбокса.
     if (typeof this.props.onChange == "function") {
       this.props.onChange();
     }
-    // this.setState({ checked: !this.state.checked });
-
-    // console.log("in checked", this.state.checked);
   }
 
   render() {
@@ -61,7 +42,6 @@ class CheckboxComponent extends React.PureComponent {
       ...attributes
     } = this.props;
 
-    console.log("in checked", this.state);
     console.log("in label", this.state.label, id);
 
     const checkClass = `${className} ${size} ${color}`;
@@ -75,13 +55,8 @@ class CheckboxComponent extends React.PureComponent {
           className={checkClass}
           size={size}
           disabled={disabled}
-          // onChange={this.props.onChangeFunc}
-
+          onChange={this.props.onChangeFunc}
           defaultChecked={checked}
-          // onChange={() => this.setState({ checked: !this.state.checked })}
-          onChange={() => {
-            this.props.onChangeFunc(this.state);
-          }}
           {...attributes}
         />
         <label htmlFor={id}>
